@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "pretest": "standard --fix",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "webpack",
+    "development": "webpack-dev-server"
+  },
+  "dependencies": {
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "is-uuid": "^1.0.2",
+    "jest": "^21.2.1",
+    "standard": "^10.0.3",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "expect"
+    ]
+  }
+}

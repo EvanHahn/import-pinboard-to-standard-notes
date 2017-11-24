@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Pinboard &#10145; Standard Notes</title>
+<link rel="stylesheet" href="vendor/normalize.css">
+<link rel="stylesheet" href="index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="superfish" content="nofish">
+
+</head>
+<body>
+
+<h1>Pinboard &#10145; Standard Notes Importer</h1>
+
+<p>Move your <a href="https://pinboard.in/" target="_blank">Pinboard</a> bookmarks into <a href="https://standardnotes.org/" target="_blank">Standard Notes</a>.</p>
+
+<noscript class="error-message">
+  <p>This importer requires JavaScript to be enabled. Please <a href="https://www.enable-javascript.com/" target="_blank">enable JavaScript</a>.</p>
+</noscript>
+
+<div id="unsupported" class="error-message">
+  <p>Your browser doesn't support some of the features required to use this importer. Please upgrade your browser.</p>
+</div>
+
+<ol id="js-steps">
+  <li><p>Visit your <a href="https://pinboard.in/settings/backup" target="_blank">Pinboard backup screen</a> and export your bookmarks as JSON.</p></li>
+
+  <li>
+    <p>Upload the exported bookmarks file below.</p>
+    <p id="js-upload-container" class="notyet">Loading...</p>
+    <p id="upload-parse-error" class="error-message"></p>
+  </li>
+
+  <li class="notyet">
+    <p>Once that's done, download a file to be imported into Standard Notes.</p>
+  </li>
+
+  <li class="notyet">
+    <p>Press "Account" on the bottom-right of the Standard Notes desktop app and select the "Import Data from Archive".</p>
+  </li>
+</ol>
+
+<script src="index.js"></script>
+
+</body>
+</html>
