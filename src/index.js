@@ -1,5 +1,8 @@
 /* global FileReader */
 
+var convert = require('./convert')
+var download = require('downloadjs')
+
 function main () {
   var isSupported = window.File && window.FileReader
   if (!isSupported) {
@@ -8,6 +11,7 @@ function main () {
 
   var uploadContainer = document.getElementById('js-upload-container')
   var uploadParseError = document.getElementById('upload-parse-error')
+  var notYets = Array.prototype.slice.call(document.querySelectorAll('.notyet'))
 
   var uploader = document.createElement('input')
   uploader.type = 'file'
@@ -23,7 +27,10 @@ function main () {
         uploadParseError.style.display = 'block'
       }
 
-      console.log(parsed)
+      var converted = convert(parsed)
+      download(JSON.stringify(converted, null, 2), 'standardnotes-pinboard-export.txt', 'text/plain')
+
+      notYets.forEach(function (el) { el.className = '' })
     }
     fileReader.readAsText(uploader.files[0])
   }, false)

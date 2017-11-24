@@ -8,6 +8,7 @@
     "development": "webpack-dev-server"
   },
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
