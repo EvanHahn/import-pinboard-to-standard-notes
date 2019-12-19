@@ -27,7 +27,7 @@ const exampleInput = [
 ]
 
 test('converts an empty list', function () {
-  expect(convert([])).toEqual({items: []})
+  expect(convert([])).toEqual({ items: [] })
 })
 
 test('converts a list with a few bookmarks', function () {
